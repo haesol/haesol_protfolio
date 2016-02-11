@@ -1,7 +1,0 @@
-/**
- * 
- */
-(function aaaa (){
-
-	alert ('aaaa');
-}());
