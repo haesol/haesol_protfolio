@@ -1,0 +1,6 @@
+
+
+(function testAl() {
+	
+	alert('hello');
+})();
