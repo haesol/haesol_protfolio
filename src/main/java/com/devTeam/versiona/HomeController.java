@@ -49,7 +49,7 @@ public class HomeController {
 		System.out.print(outputs.toString());
 		//git test
 
-		return "home";
+		return "article";
 	}
 
 }
