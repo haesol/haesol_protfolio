@@ -18,7 +18,7 @@ public class HomeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView home() {
 
-		String url = "redirect:/resources/index.html";
+		String url = "redirect:/resources/article.html";
 		return new ModelAndView(url);
 
 	}
