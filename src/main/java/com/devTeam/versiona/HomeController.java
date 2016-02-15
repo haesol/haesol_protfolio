@@ -13,7 +13,7 @@ public class HomeController {
 
 
 	/**
-	 * redirect to static index.html resource, Our Home!
+	 * redirect to article, that is our Home Page.
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView home() {
