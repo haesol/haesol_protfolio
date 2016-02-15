@@ -37,7 +37,7 @@ public class AriticleController {
 			mav.addObject(prefix[i] + "ArticleTimestamp", sqlOutputs.get(i).get("timestamp"));
 			mav.addObject(prefix[i] + "ArticleDescription",	sqlOutputs.get(i).get("description"));
 			mav.addObject(prefix[i] + "ArticleImg", sqlOutputs.get(i).get("img"));
-
+			//hello git
 		}
 		return mav;
 	}
