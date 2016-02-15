@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding= "UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+ 
+<mapper namespace= "sqlControlMapper" >
+    <select id ="selectArticleByCategoryAndPage" parameterType="java.util.HashMap" resultType= "java.util.HashMap">
+        SELECT A.article_pk, A.title, A.description, A.img, A.uri, A.like, A.timestamp, U.user_pk, U.name, U.img_thumb_profile
+        FROM (SELECT * FROM article WHERE category = #{category}) AS A
+        LEFT OUTER JOIN user AS U ON A.user_fk = U.user_pk
+        ORDER BY A.like DESC
+        LIMIT #{page}, 3
+    </select >
+</mapper>
