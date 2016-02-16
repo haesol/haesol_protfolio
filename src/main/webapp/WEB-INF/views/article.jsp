@@ -94,11 +94,11 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                    Blog Home One <small>Subheading</small>
+                    모든 아티클 <small></small>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="/article">Home</a></li>
-                    <li class="active">Blog Home One</li>
+                    <li class="active">모든 아티클</li>
                 </ol>
             </div>
         </div>
@@ -221,9 +221,8 @@
 
                 <!-- Side Widget Well -->
                 <div class="well">
-                    <h4>Side Widget Well</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus
-                        laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
+                    <h4>Info</h4>
+                    <p>원하는 카테고리에 자유롭게 아티클을 업로드할 수 있습니다. 현재는 외부 글로의 이동만 가능하며, 자체적인 글쓰기 기능은 추후 개발될 예정입니다 :)</p>
                 </div>
 
             </div>
