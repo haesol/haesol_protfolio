@@ -60,7 +60,7 @@
 					<li><a href="/query">Query</a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown"><img
-							src="http://mud-kage.kakao.co.kr/14/dn/btqbJlyNypL/kFOdHKDFNBlBW2VD9Ei00K/o.jpg"
+							src="/resources/img/no_profile_img.png"
 							class="navi-profile"></img></a>
 						<ul class="dropdown-menu">
 							<li><a href="/profile">Profile</a></li>
