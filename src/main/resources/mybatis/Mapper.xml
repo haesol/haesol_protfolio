@@ -11,4 +11,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         ORDER BY A.like DESC
         LIMIT #{page}, 3
     </select >
+    
+    <select id ="selectAllArticleByPage" parameterType="java.util.HashMap" resultType= "java.util.HashMap">
+        SELECT A.article_pk, A.title, A.description, A.img, A.uri, A.like, A.timestamp, U.user_pk, U.name, U.img_thumb_profile
+        FROM article AS A
+        LEFT OUTER JOIN user AS U ON A.user_fk = U.user_pk
+        ORDER BY A.like DESC
+        LIMIT #{page}, 3
+    </select >
 </mapper>

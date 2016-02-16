@@ -182,7 +182,7 @@
 
                 <!-- Blog Search Well -->
                 <div class="well">
-                    <h4>Blog Search</h4>
+                    <h4>Search</h4>
                     <div class="input-group">
                         <input type="text" class="form-control"> <span class="input-group-btn">
                             <button class="btn btn-default" type="button">
@@ -195,23 +195,23 @@
 
                 <!-- Blog Categories Well -->
                 <div class="well">
-                    <h4>Blog Categories</h4>
+                    <h4>Categories</h4>
                     <div class="row">
                         <div class="col-lg-6">
                             <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a></li>
-                                <li><a href="#">Category Name</a></li>
-                                <li><a href="#">Category Name</a></li>
-                                <li><a href="#">Category Name</a></li>
+                                <li><a href="#">모든 아티클</a></li>
+                                <li><a href="#">${category2}</a></li>
+                                <li><a href="#">${category4}</a></li>
+                                <li><a href="#">${category6}</a></li>
                             </ul>
                         </div>
                         <!-- /.col-lg-6 -->
                         <div class="col-lg-6">
                             <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a></li>
-                                <li><a href="#">Category Name</a></li>
-                                <li><a href="#">Category Name</a></li>
-                                <li><a href="#">Category Name</a></li>
+                                <li><a href="#">${category1}</a></li>
+                                <li><a href="#">${category3}</a></li>
+                                <li><a href="#">${category5}</a></li>
+                                <li><a href="#">${category7}</a></li>
                             </ul>
                         </div>
                         <!-- /.col-lg-6 -->
