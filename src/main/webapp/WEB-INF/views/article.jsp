@@ -14,7 +14,7 @@
 <title>Hello Developer</title>
 
 <!-- Bootstrap Core CSS -->
-<link href="/resources/css/bootstrap.min.css" rel="stylesheet">
+<link href="/resources/css/bootstrap.css" rel="stylesheet">
 
 <!-- Custom CSS -->
 <link href="/resources/css/modern-business.css" rel="stylesheet">
@@ -22,6 +22,10 @@
 <!-- Custom Fonts -->
 <link href="/resources/font-awesome/css/font-awesome.min.css"
 	rel="stylesheet" type="text/css">
+
+<!-- Custom Fonts -->
+<link href="/resources/css/hellodeveloper.css" rel="stylesheet"
+	type="text/css">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -55,7 +59,9 @@
 					<li><a href="/article">Article</a></li>
 					<li><a href="/query">Query</a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown">My<b class="caret"></b></a>
+						data-toggle="dropdown"><img
+							src="http://mud-kage.kakao.co.kr/14/dn/btqbJlyNypL/kFOdHKDFNBlBW2VD9Ei00K/o.jpg"
+							class="navi-profile"></img></a>
 						<ul class="dropdown-menu">
 							<li><a href="/profile">Profile</a></li>
 							<li><a href="/myArticle">Article</a></li>
@@ -93,7 +99,7 @@
 
 				<!-- First Blog Post -->
 				<h2>
-					<a href=${firstArticleUrl} target="_blank">${firstArticleTitle}</a>
+					<a href=${firstArticleUrl } target="_blank">${firstArticleTitle}</a>
 				</h2>
 				<p class="lead">
 					by <a href="index.php">${firstArticleAuthor}</a>
@@ -102,8 +108,8 @@
 					<i class="fa fa-clock-o"></i> ${firstArticleTimestamp}
 				</p>
 				<hr>
-				<a href=${firstArticleUrl} target="_blank"> <img class="img-responsive img-hover"
-					src=${firstArticleImg} alt="">
+				<a href=${firstArticleUrl } target="_blank"> <img
+					class="img-responsive img-hover" src=${firstArticleImg } alt="">
 				</a>
 				<hr>
 				<p>${firstArticleDescription}</p>
@@ -114,7 +120,7 @@
 
 				<!-- Second Blog Post -->
 				<h2>
-					<a href=${secondArticleUrl} target="_blank">${secondArticleTitle}</a>
+					<a href=${secondArticleUrl } target="_blank">${secondArticleTitle}</a>
 				</h2>
 				<p class="lead">
 					by <a href="index.php">${secondArticleAuthor}</a>
@@ -123,8 +129,8 @@
 					<i class="fa fa-clock-o"></i> ${secondArticleTimestamp}
 				</p>
 				<hr>
-				<a href=${secondArticleUrl} target="_blank"> <img class="img-responsive img-hover"
-					src=${secondArticleImg} alt="">
+				<a href=${secondArticleUrl } target="_blank"> <img
+					class="img-responsive img-hover" src=${secondArticleImg } alt="">
 				</a>
 				<hr>
 				<p>${secondArticleDescription}</p>
@@ -135,7 +141,7 @@
 
 				<!-- Third Blog Post -->
 				<h2>
-					<a href=${thirdArticleUrl} target="_blank">${thirdArticleTitle}</a>
+					<a href=${thirdArticleUrl } target="_blank">${thirdArticleTitle}</a>
 				</h2>
 				<p class="lead">
 					by <a href="index.php">${thirdArticleAuthor}</a>
@@ -144,8 +150,8 @@
 					<i class="fa fa-clock-o"></i> ${thirdArticleTimestamp}
 				</p>
 				<hr>
-				<a href=${thirdArticleUrl} target="_blank"> <img class="img-responsive img-hover"
-					src=${thirdArticleImg} alt="">
+				<a href=${thirdArticleUrl } target="_blank"> <img
+					class="img-responsive img-hover" src=${thirdArticleImg } alt="">
 				</a>
 				<hr>
 				<p>${thirdArticleDescription}</p>
