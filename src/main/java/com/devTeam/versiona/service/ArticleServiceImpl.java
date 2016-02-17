@@ -14,9 +14,15 @@ public class ArticleServiceImpl implements ArticleService{
     }
     
     @Override
-    public List<HashMap<String, String>> getCategoryArticle(int page) {
+    public List<HashMap<String, String>> getAllCategoryArticle(int page) {
         // TODO Auto-generated method stub
         return articleDao.selectAllCategoryArticle(page);
+    }
+
+    @Override
+    public List<HashMap<String, String>> getArticleByCategoryAndPage(String category, int page) {
+        // TODO Auto-generated method stub
+        return articleDao.selectArticleByCategoryAndPage(category, page);
     }
 
 }

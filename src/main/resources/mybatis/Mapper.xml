@@ -5,7 +5,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  
 <mapper namespace= "sqlControlMapper" >
     <select id ="selectArticleByCategoryAndPage" parameterType="java.util.HashMap" resultType= "java.util.HashMap">
-        SELECT A.article_pk, A.title, A.description, A.img, A.uri, A.like, A.timestamp, U.user_pk, U.name, U.img_thumb_profile
+        SELECT A.article_pk AS id, A.title, A.description, A.img, A.uri, A.like, DATE_FORMAT(A.timestamp, '%Y.%m.%d %p %h:%m') AS timestamp, U.user_pk AS userId, U.name AS userName, U.img_thumb_profile AS userThumbnail
         FROM (SELECT * FROM article WHERE category = #{category}) AS A
         LEFT OUTER JOIN user AS U ON A.user_fk = U.user_pk
         ORDER BY A.like DESC
@@ -13,7 +13,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </select >
     
     <select id ="selectAllArticleByPage" parameterType="java.util.HashMap" resultType= "java.util.HashMap">
-        SELECT A.article_pk, A.title, A.description, A.img, A.uri, A.like, A.timestamp, U.user_pk, U.name, U.img_thumb_profile
+        SELECT A.article_pk AS id, A.title, A.description, A.img, A.uri, A.like, DATE_FORMAT(A.timestamp, '%Y.%m.%d %p %h:%m') AS timestamp, U.user_pk AS userId, U.name AS userName, U.img_thumb_profile AS userThumbnail
         FROM article AS A
         LEFT OUTER JOIN user AS U ON A.user_fk = U.user_pk
         ORDER BY A.like DESC

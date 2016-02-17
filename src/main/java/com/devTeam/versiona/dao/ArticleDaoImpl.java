@@ -24,5 +24,15 @@ public class ArticleDaoImpl implements ArticleDao{
 
         return sqlSession.selectList("sqlControlMapper.selectAllArticleByPage", sqlInput);
     }
+    @Override
+    public List<HashMap<String, String>> selectArticleByCategoryAndPage(String category, int page) {
+        // TODO Auto-generated method stub
+        HashMap<String, Object> sqlInput = new HashMap<String, Object>();
+        sqlInput.put("category", category);
+        sqlInput.put("page", page * Constant.VIEWING_ARTICLE_NUMBER);
+        sqlInput.put("viewing_article_number", Constant.VIEWING_ARTICLE_NUMBER);
+
+        return sqlSession.selectList("sqlControlMapper.selectArticleByCategoryAndPage", sqlInput);
+    }
 
 }

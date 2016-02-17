@@ -116,7 +116,7 @@
                         <a href=${result.uri } target="_blank">${result.title}</a>
                     </h2>
                     <p class="lead">
-                        by <a href="index.php">${result.name}</a>
+                        by <a href="index.php">${result.userName}</a>
                     </p>
                     <p>
                         <i class="fa fa-clock-o"></i> ${result.timestamp}

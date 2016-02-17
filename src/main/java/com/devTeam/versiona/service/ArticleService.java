@@ -5,6 +5,7 @@ import java.util.List;
 
 public interface ArticleService {
     
-    public List<HashMap<String, String>> getCategoryArticle(int page);
+    public List<HashMap<String, String>> getAllCategoryArticle(int page);
+    public List<HashMap<String, String>> getArticleByCategoryAndPage(String category, int page);
 
 }
