@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.devTeam.versiona.service.ArticleService;
 import com.devTeam.versiona.utils.ArticleCategory;
 
 /**
@@ -21,21 +22,14 @@ import com.devTeam.versiona.utils.ArticleCategory;
 public class AriticleController {
 
     @Autowired
+    private ArticleService articleService;
+    @Autowired
     private SqlSession sqlSession;
 
     @RequestMapping(value = "/article", method = RequestMethod.GET)
-    public void article(@RequestParam Map<String, Object> paramMap, ModelMap model) throws Throwable{
+    public void article(@RequestParam Map<String, Object> paramMap, ModelMap model) throws Throwable {
 
-        makeMVforArticleJSP(model, getArticlePageSQLResult());
-
-    }
-
-    private List<HashMap<String, String>> getArticlePageSQLResult() {
-
-        HashMap<String, Object> sqlInput = new HashMap<String, Object>();
-        sqlInput.put("page", 0);
-
-        return sqlSession.selectList("sqlControlMapper.selectAllArticleByPage", sqlInput);
+        makeMVforArticleJSP(model, articleService.getCategoryArticle(0));
 
     }
 
