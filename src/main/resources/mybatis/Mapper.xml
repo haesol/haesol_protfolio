@@ -9,7 +9,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         FROM (SELECT * FROM article WHERE category = #{category}) AS A
         LEFT OUTER JOIN user AS U ON A.user_fk = U.user_pk
         ORDER BY A.like DESC
-        LIMIT #{page}, 3
+        LIMIT #{page}, #{viewing_article_number}
     </select >
     
     <select id ="selectAllArticleByPage" parameterType="java.util.HashMap" resultType= "java.util.HashMap">
@@ -17,6 +17,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         FROM article AS A
         LEFT OUTER JOIN user AS U ON A.user_fk = U.user_pk
         ORDER BY A.like DESC
-        LIMIT #{page}, 3
+        LIMIT #{page}, #{viewing_article_number}
     </select >
 </mapper>

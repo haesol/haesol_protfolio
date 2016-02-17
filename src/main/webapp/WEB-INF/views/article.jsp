@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -106,68 +107,29 @@
 
         <div class="row">
 
-            <!-- Blog Entries Column -->
+            <!-- Article Entries Column -->
             <div class="col-md-8">
 
-                <!-- First Blog Post -->
-                <h2>
-                    <a href=${firstArticleUrl } target="_blank">${firstArticleTitle}</a>
-                </h2>
-                <p class="lead">
-                    by <a href="index.php">${firstArticleAuthor}</a>
-                </p>
-                <p>
-                    <i class="fa fa-clock-o"></i> ${firstArticleTimestamp}
-                </p>
-                <hr>
-                <a href=${firstArticleUrl } target="_blank"> <img class="img-responsive img-hover" src=${firstArticleImg }
-                    alt="">
-                </a>
-                <hr>
-                <p>${firstArticleDescription}</p>
-                <a class="btn btn-primary" href="#">Read More <i class="fa fa-angle-right"></i></a>
+                <!-- Article -->
+                <c:forEach items="${results}" var="result">
+                    <h2>
+                        <a href=${result.uri } target="_blank">${result.title}</a>
+                    </h2>
+                    <p class="lead">
+                        by <a href="index.php">${result.name}</a>
+                    </p>
+                    <p>
+                        <i class="fa fa-clock-o"></i> ${result.timestamp}
+                    </p>
+                    <hr>
+                    <a href=${result.uri } target="_blank"> <img class="img-responsive img-hover" src=${result.img } alt="">
+                    </a>
+                    <hr>
+                    <p>${result.description}</p>
+                    <a class="btn btn-primary" href="#">Read More <i class="fa fa-angle-right"></i></a>
 
-                <hr>
-
-                <!-- Second Blog Post -->
-                <h2>
-                    <a href=${secondArticleUrl } target="_blank">${secondArticleTitle}</a>
-                </h2>
-                <p class="lead">
-                    by <a href="index.php">${secondArticleAuthor}</a>
-                </p>
-                <p>
-                    <i class="fa fa-clock-o"></i> ${secondArticleTimestamp}
-                </p>
-                <hr>
-                <a href=${secondArticleUrl } target="_blank"> <img class="img-responsive img-hover" src=${secondArticleImg }
-                    alt="">
-                </a>
-                <hr>
-                <p>${secondArticleDescription}</p>
-                <a class="btn btn-primary" href="#">Read More <i class="fa fa-angle-right"></i></a>
-
-                <hr>
-
-                <!-- Third Blog Post -->
-                <h2>
-                    <a href=${thirdArticleUrl } target="_blank">${thirdArticleTitle}</a>
-                </h2>
-                <p class="lead">
-                    by <a href="index.php">${thirdArticleAuthor}</a>
-                </p>
-                <p>
-                    <i class="fa fa-clock-o"></i> ${thirdArticleTimestamp}
-                </p>
-                <hr>
-                <a href=${thirdArticleUrl } target="_blank"> <img class="img-responsive img-hover" src=${thirdArticleImg }
-                    alt="">
-                </a>
-                <hr>
-                <p>${thirdArticleDescription}</p>
-                <a class="btn btn-primary" href="#">Read More <i class="fa fa-angle-right"></i></a>
-
-                <hr>
+                    <hr>
+                </c:forEach>
 
                 <!-- Pager -->
                 <ul class="pager">
@@ -200,18 +162,15 @@
                         <div class="col-lg-6">
                             <ul class="list-unstyled">
                                 <li><a href="#">모든 아티클</a></li>
-                                <li><a href="#">${category2}</a></li>
-                                <li><a href="#">${category4}</a></li>
-                                <li><a href="#">${category6}</a></li>
+                                <li><a href="#">개발자 이야기</a></li>
+                                <li><a href="#">기타</a></li>
                             </ul>
                         </div>
                         <!-- /.col-lg-6 -->
                         <div class="col-lg-6">
                             <ul class="list-unstyled">
-                                <li><a href="#">${category1}</a></li>
-                                <li><a href="#">${category3}</a></li>
-                                <li><a href="#">${category5}</a></li>
-                                <li><a href="#">${category7}</a></li>
+                                <li><a href="#">Get Started</a></li>
+                                <li><a href="#">팁&테크</a></li>
                             </ul>
                         </div>
                         <!-- /.col-lg-6 -->

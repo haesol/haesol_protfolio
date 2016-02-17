@@ -20,6 +20,7 @@ public class ArticleDaoImpl implements ArticleDao{
         // TODO Auto-generated method stub
         HashMap<String, Object> sqlInput = new HashMap<String, Object>();
         sqlInput.put("page", page * Constant.VIEWING_ARTICLE_NUMBER);
+        sqlInput.put("viewing_article_number", Constant.VIEWING_ARTICLE_NUMBER);
 
         return sqlSession.selectList("sqlControlMapper.selectAllArticleByPage", sqlInput);
     }
