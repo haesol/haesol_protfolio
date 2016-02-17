@@ -2,13 +2,15 @@ package com.devTeam.versiona;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.devTeam.versiona.utils.ArticleCategory;
 
@@ -22,9 +24,9 @@ public class AriticleController {
     private SqlSession sqlSession;
 
     @RequestMapping(value = "/article", method = RequestMethod.GET)
-    public ModelAndView article() {
+    public void article(@RequestParam Map<String, Object> paramMap, ModelMap model) throws Throwable{
 
-        return makeMVforArticleJSP(getArticlePageSQLResult());
+        makeMVforArticleJSP(model, getArticlePageSQLResult());
 
     }
 
@@ -37,27 +39,23 @@ public class AriticleController {
 
     }
 
-    private ModelAndView makeMVforArticleJSP(List<HashMap<String, String>> sqlOutputs) {
+    private void makeMVforArticleJSP(ModelMap model, List<HashMap<String, String>> sqlOutputs) {
 
         String[] prefix = { "first", "second", "third" };
-        ModelAndView mav = new ModelAndView("article");
         for (int i = 0; i < sqlOutputs.size(); i++) {
 
-            mav.addObject(prefix[i] + "ArticleTitle", sqlOutputs.get(i).get("title"));
-            mav.addObject(prefix[i] + "ArticleUrl", sqlOutputs.get(i).get("uri"));
-            mav.addObject(prefix[i] + "ArticleAuthor", sqlOutputs.get(i).get("name"));
-            mav.addObject(prefix[i] + "ArticleTimestamp", sqlOutputs.get(i).get("timestamp"));
-            mav.addObject(prefix[i] + "ArticleDescription", sqlOutputs.get(i).get("description"));
-            mav.addObject(prefix[i] + "ArticleImg", sqlOutputs.get(i).get("img"));
+            model.put(prefix[i] + "ArticleTitle", sqlOutputs.get(i).get("title"));
+            model.put(prefix[i] + "ArticleUrl", sqlOutputs.get(i).get("uri"));
+            model.put(prefix[i] + "ArticleAuthor", sqlOutputs.get(i).get("name"));
+            model.put(prefix[i] + "ArticleTimestamp", sqlOutputs.get(i).get("timestamp"));
+            model.put(prefix[i] + "ArticleDescription", sqlOutputs.get(i).get("description"));
+            model.put(prefix[i] + "ArticleImg", sqlOutputs.get(i).get("img"));
 
         }
 
-        mav.addObject("category1", ArticleCategory.GETSTARTED.getName());
-        mav.addObject("category2", ArticleCategory.DEVSTORY.getName());
-        mav.addObject("category3", ArticleCategory.TIPNTECH.getName());
-        mav.addObject("category4", ArticleCategory.ETC.getName());
-
-        return mav;
-
+        model.put("category1", ArticleCategory.GETSTARTED.getName());
+        model.put("category2", ArticleCategory.DEVSTORY.getName());
+        model.put("category3", ArticleCategory.TIPNTECH.getName());
+        model.put("category4", ArticleCategory.ETC.getName());
     }
 }

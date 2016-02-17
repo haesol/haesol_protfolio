@@ -27,7 +27,7 @@ public class AticleAjaxController {
 		
 		HashMap<String, Object> sqlInput = new HashMap<String, Object>();
 		// sqlInput. 墨抛绊府  傍何规过俊 page 0锅
-		sqlInput.put("category", "傍何规过");
+		sqlInput.put("category", "Get Started");
 		sqlInput.put("page", 0);
 		
 		List<HashMap<String, String>> sqlOutputs = sqlSession.selectList("sqlControlMapper.selectArticleByCategoryAndPage", sqlInput);
