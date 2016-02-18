@@ -8,8 +8,8 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
+<meta name="description" content="개발자에게 유익한 글들을 모아보고있습니다.">
+<meta name="author" content="PlanetEarthTravellers">
 
 <title>Hello Developer</title>
 
