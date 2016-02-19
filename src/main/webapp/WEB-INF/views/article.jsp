@@ -1,14 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
 
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="°³¹ßÀÚ¿¡°Ô À¯ÀÍÇÑ ±ÛµéÀ» ¸ğ¾Æº¸°íÀÖ½À´Ï´Ù.">
+<meta name="description" content="ê°œë°œìì—ê²Œ ìœ ìµí•œ ê¸€ë“¤ì„ ëª¨ì•„ë³´ê³ ìˆìŠµë‹ˆë‹¤.">
 <meta name="author" content="PlanetEarthTravellers">
 
 <title>Hello Developer</title>
@@ -95,11 +95,11 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                    ¸ğµç ¾ÆÆ¼Å¬ <small></small>
+                    ëª¨ë“  ì•„í‹°í´ <small></small>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="/article">Home</a></li>
-                    <li class="active">¸ğµç ¾ÆÆ¼Å¬</li>
+                    <li class="active">ëª¨ë“  ì•„í‹°í´</li>
                 </ol>
             </div>
         </div>
@@ -111,30 +111,33 @@
             <div class="col-md-8">
 
                 <!-- Article -->
-                <c:forEach items="${results}" var="result">
-                    <h2>
-                        <a href=${result.uri } target="_blank">${result.title}</a>
-                    </h2>
-                    <p class="lead">
-                        by <a href="index.php">${result.userName}</a>
-                    </p>
-                    <p>
-                        <i class="fa fa-clock-o"></i> ${result.timestamp}
-                    </p>
-                    <hr>
-                    <a href=${result.uri } target="_blank"> <img class="img-responsive img-hover" src=${result.img } alt="">
-                    </a>
-                    <hr>
-                    <p>${result.description}</p>
-                    <a class="btn btn-primary" href="#">Read More <i class="fa fa-angle-right"></i></a>
+                <c:forEach items="${results}" var="result" varStatus="status">
+                    <div id="article${status.count}">
+                        <h2>
+                            <a id="article-title${status.count}" href="${result.uri}" target="_blank">${result.title}</a>
+                        </h2>
+                        <p class="lead">
+                            by <a id="article-username${status.count}" href="index.php">${result.userName}</a>
+                        </p>
+                        <p id="article-timestamp${status.count}">
+                            <i class="fa fa-clock-o"></i> ${result.timestamp}
+                        </p>
+                        <hr>
+                        <a id="article-imghref${status.count}" href="${result.uri}" target="_blank"> <img
+                            id="article-img${status.count}" class="img-responsive img-hover" src="${result.img}" alt="">
+                        </a>
+                        <hr>
+                        <p id="article-description${status.count}">${result.description}</p>
+                        <a class="btn btn-primary" href="#">Read More <i class="fa fa-angle-right"></i></a>
 
-                    <hr>
+                        <hr>
+                    </div>
                 </c:forEach>
 
                 <!-- Pager -->
                 <ul class="pager">
-                    <li class="previous"><a href="#">&larr; Older</a></li>
-                    <li class="next"><a href="#">Newer &rarr;</a></li>
+                    <li id="previous" class="previous"><a href="#">&larr; Older</a></li>
+                    <li id="next" class="next"><a href="#">Newer &rarr;</a></li>
                 </ul>
 
             </div>
@@ -161,16 +164,16 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <ul class="list-unstyled">
-                                <li><a href="#">¸ğµç ¾ÆÆ¼Å¬</a></li>
-                                <li><a href="#">°³¹ßÀÚ ÀÌ¾ß±â</a></li>
-                                <li><a href="#">±âÅ¸</a></li>
+                                <li><a id="all-category" href="#">ëª¨ë“  ì•„í‹°í´</a></li>
+                                <li><a id="devstory-category" href="#">ê°œë°œì ì´ì•¼ê¸°</a></li>
+                                <li><a id="etc-category" href="#">ê¸°íƒ€</a></li>
                             </ul>
                         </div>
                         <!-- /.col-lg-6 -->
                         <div class="col-lg-6">
                             <ul class="list-unstyled">
-                                <li><a href="#">Get Started</a></li>
-                                <li><a href="#">ÆÁ&Å×Å©</a></li>
+                                <li><a id="getstarted-category" href="#">Get Started</a></li>
+                                <li><a id="tipntech-category" href="#">íŒ&í…Œí¬</a></li>
                             </ul>
                         </div>
                         <!-- /.col-lg-6 -->
@@ -181,7 +184,7 @@
                 <!-- Side Widget Well -->
                 <div class="well">
                     <h4>Info</h4>
-                    <p>¿øÇÏ´Â Ä«Å×°í¸®¿¡ ÀÚÀ¯·Ó°Ô ¾ÆÆ¼Å¬À» ¾÷·ÎµåÇÒ ¼ö ÀÖ½À´Ï´Ù. ÇöÀç´Â ¿ÜºÎ ±Û·ÎÀÇ ÀÌµ¿¸¸ °¡´ÉÇÏ¸ç, ÀÚÃ¼ÀûÀÎ ±Û¾²±â ±â´ÉÀº ÃßÈÄ °³¹ßµÉ ¿¹Á¤ÀÔ´Ï´Ù :)</p>
+                    <p>ì›í•˜ëŠ” ì¹´í…Œê³ ë¦¬ì— ììœ ë¡­ê²Œ ì•„í‹°í´ì„ ì—…ë¡œë“œí•  ìˆ˜ ìˆìŠµë‹ˆë‹¤. í˜„ì¬ëŠ” ì™¸ë¶€ ê¸€ë¡œì˜ ì´ë™ë§Œ ê°€ëŠ¥í•˜ë©°, ìì²´ì ì¸ ê¸€ì“°ê¸° ê¸°ëŠ¥ì€ ì¶”í›„ ê°œë°œë  ì˜ˆì •ì…ë‹ˆë‹¤ :)</p>
                 </div>
 
             </div>
@@ -208,6 +211,9 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/resources/js/bootstrap.min.js"></script>
+
+    <!-- article JavaScript -->
+    <script src="/resources/js/article.js" charset="utf-8"></script>
 
 </body>
 
