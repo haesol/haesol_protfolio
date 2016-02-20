@@ -69,8 +69,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/about">About</a></li>
-                    <li><a href="/article">Article</a></li>
-                    <li><a href="/query">Query</a></li>
+                    <li><a href="/developers">Developers</a></li>
                     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><img
                             src="/resources/img/no_profile_img.png" class="navi-profile"></img></a>
                         <ul class="dropdown-menu">
