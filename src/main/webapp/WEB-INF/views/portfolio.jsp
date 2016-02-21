@@ -1,11 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
+
+<html lang="ko">
+
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js">
 <!--<![endif]-->
 
 <head>
@@ -21,28 +23,28 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100' rel='stylesheet' type='text/css'>
 
     <!-- Bootstrap and Font Awesome css -->
-    <link href="css/font-awesome.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/resources/css/font-awesome.css" rel="stylesheet">
+    <link href="/resources/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Theme stylesheet -->
-    <link href="css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+    <link href="/resources/css/style.blue.css" rel="stylesheet" id="theme-stylesheet">
 
     <!-- Custom stylesheet - for your changes -->
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="/resources/css/custom.css" rel="stylesheet">
 
     <!-- owl carousel css -->
 
-    <link href="css/owl.carousel.css" rel="stylesheet">
-    <link href="css/owl.theme.css" rel="stylesheet">
+    <link href="/resources/css/owl.carousel.css" rel="stylesheet">
+    <link href="/resources/css/owl.theme.css" rel="stylesheet">
 
     <!-- CSS Animations -->
-    <link href="css/animate.css" rel="stylesheet">
+    <link href="/resources/css/animate.css" rel="stylesheet">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.png">
+    <link rel="shortcut icon" href="/resources/favicon.png">
 
     <!-- Mordernizr -->
-    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="/resources/js/modernizr-2.6.2.min.js"></script>
 
     <!-- Responsivity for older IE -->
     <!--[if lt IE 9]>
@@ -106,9 +108,9 @@ _________________________________________________________ -->
                     <div class="row">
                         <div class="carousel-caption">
                             <div data-animate="fadeInDown" class="logo">
-                                <img src="img/logo-big.png" alt="logo" width="130">
+                                <img src="/resources/img/logo-big.png" alt="logo" width="130">
                             </div>
-                            <h1 data-animate="fadeInDown">Hello, hola, नमस्ते !</h1>
+                            <h1 data-animate="fadeInDown">안녕하세요, 이해솔입니다.</h1>
                             <h2 data-animate="slideInUp">I grind HTML and CSS and then weld them with PHP into beautiful and efficient websites.</h2>
                         </div>
                     </div>
@@ -209,7 +211,7 @@ _________________________________________________________ -->
                     </div>
 
                     <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 mt-big" data-animate="bounceIn">
-                        <img src="img/about.jpg" class="image img-circle img-responsive" alt="This is me - IT worker">
+                        <img src="/resources/img/about.jpg" class="image img-circle img-responsive" alt="This is me - IT worker">
                     </div>
                 </div>
             </div>
@@ -297,7 +299,7 @@ _________________________________________________________ -->
                                     <div class="icon"><i class="fa fa-quote-left"></i>
                                     </div>
                                     <div class="name-picture">
-                                        <img class="" alt="" src="img/person-1.jpg">
+                                        <img class="" alt="" src="/resources/img/person-1.jpg">
                                         <h5>John McIntyre</h5>
                                         <p>CEO, TransTech</p>
                                     </div>
@@ -314,7 +316,7 @@ _________________________________________________________ -->
                                     <div class="icon"><i class="fa fa-quote-left"></i>
                                     </div>
                                     <div class="name-picture">
-                                        <img class="" alt="" src="img/person-2.jpg">
+                                        <img class="" alt="" src="/resources/img/person-2.jpg">
                                         <h5>John McIntyre</h5>
                                         <p>CEO, TransTech</p>
                                     </div>
@@ -333,7 +335,7 @@ _________________________________________________________ -->
                                     <div class="icon"><i class="fa fa-quote-left"></i>
                                     </div>
                                     <div class="name-picture">
-                                        <img class="" alt="" src="img/person-3.jpg">
+                                        <img class="" alt="" src="/resources/img/person-3.jpg">
                                         <h5>John McIntyre</h5>
                                         <p>CEO, TransTech</p>
                                     </div>
@@ -351,7 +353,7 @@ _________________________________________________________ -->
                                     <div class="icon"><i class="fa fa-quote-left"></i>
                                     </div>
                                     <div class="name-picture">
-                                        <img class="" alt="" src="img/person-4.jpg">
+                                        <img class="" alt="" src="/resources/img/person-4.jpg">
                                         <h5>John McIntyre</h5>
                                         <p>CEO, TransTech</p>
                                     </div>
@@ -370,7 +372,7 @@ _________________________________________________________ -->
                                     <div class="icon"><i class="fa fa-quote-left"></i>
                                     </div>
                                     <div class="name-picture">
-                                        <img class="" alt="" src="img/person-4.jpg">
+                                        <img class="" alt="" src="/resources/img/person-4.jpg">
                                         <h5>John McIntyre</h5>
                                         <p>CEO, TransTech</p>
                                     </div>
@@ -485,7 +487,7 @@ _________________________________________________________ -->
                         <div class="reference-item" data-category="webdesign">
                             <div class="reference">
                                 <a href="#">
-                                    <img src="img/portfolio-1.jpg" class="img-responsive" alt="" />
+                                    <img src="/resources/img/portfolio-1.jpg" class="img-responsive" alt="" />
 
                                     <div class="overlay">
                                         <h3 class="reference-title">Project name</h3> 
@@ -493,7 +495,7 @@ _________________________________________________________ -->
                                     </div>
                                 </a>
 
-                                <div class="sr-only reference-description" data-images="img/main-slider1.jpg,img/main-slider2.jpg,img/main-slider3.jpg">
+                                <div class="sr-only reference-description" data-images="/resources/img/main-slider1.jpg,/resources/img/main-slider2.jpg,/resources/img/main-slider3.jpg">
 
                                     <p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour
                                         explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
@@ -511,7 +513,7 @@ _________________________________________________________ -->
                         <div class="reference-item" data-category="seo">
                             <div class="reference">
                                 <a href="#">
-                                    <img src="img/portfolio-2.jpg" class="img-responsive" alt="" />
+                                    <img src="/resources/img/portfolio-2.jpg" class="img-responsive" alt="" />
 
                                     <div class="overlay">
                                         <h3 class="reference-title">Project name</h3> 
@@ -538,7 +540,7 @@ _________________________________________________________ -->
                         <div class="reference-item" data-category="marketing">
                             <div class="reference">
                                 <a href="#">
-                                    <img src="img/portfolio-3.jpg" class="img-responsive" alt="" />
+                                    <img src="/resources/img/portfolio-3.jpg" class="img-responsive" alt="" />
 
                                     <div class="overlay">
                                         <h3 class="reference-title">Project name</h3> 
@@ -546,7 +548,7 @@ _________________________________________________________ -->
                                     </div>
                                 </a>
 
-                                <div class="sr-only reference-description" data-images="img/main-slider1.jpg,img/main-slider2.jpg,img/main-slider3.jpg">
+                                <div class="sr-only reference-description" data-images="/resources/img/main-slider1.jpg,/resources/img/main-slider2.jpg,/resources/img/main-slider3.jpg">
 
                                     <p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour
                                         explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
@@ -566,7 +568,7 @@ _________________________________________________________ -->
                         <div class="reference-item" data-category="marketing">
                             <div class="reference">
                                 <a href="#">
-                                    <img src="img/portfolio-4.jpg" class="img-responsive" alt="" />
+                                    <img src="/resources/img/portfolio-4.jpg" class="img-responsive" alt="" />
 
                                     <div class="overlay">
                                         <h3 class="reference-title">Project name</h3> 
@@ -574,7 +576,7 @@ _________________________________________________________ -->
                                     </div>
                                 </a>
 
-                                <div class="sr-only reference-description" data-images="img/main-slider1.jpg,img/main-slider2.jpg,img/main-slider3.jpg">
+                                <div class="sr-only reference-description" data-images="/resources/img/main-slider1.jpg,/resources/img/main-slider2.jpg,/resources/img/main-slider3.jpg">
 
                                     <p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour
                                         explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
@@ -593,7 +595,7 @@ _________________________________________________________ -->
                         <div class="reference-item" data-category="webdesign">
                             <div class="reference">
                                 <a href="#">
-                                    <img src="img/portfolio-5.jpg" class="img-responsive" alt="" />
+                                    <img src="/resources/img/portfolio-5.jpg" class="img-responsive" alt="" />
 
                                     <div class="overlay">
                                         <h3 class="reference-title">Project name</h3> 
@@ -601,7 +603,7 @@ _________________________________________________________ -->
                                     </div>
                                 </a>
 
-                                <div class="sr-only reference-description" data-images="img/main-slider1.jpg,img/main-slider2.jpg,img/main-slider3.jpg">
+                                <div class="sr-only reference-description" data-images="/resources/img/main-slider1.jpg,/resources/img/main-slider2.jpg,/resources/img/main-slider3.jpg">
 
                                     <p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour
                                         explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
@@ -621,7 +623,7 @@ _________________________________________________________ -->
                         <div class="reference-item" data-category="other">
                             <div class="reference">
                                 <a href="#">
-                                    <img src="img/portfolio-6.jpg" class="img-responsive" alt="" />
+                                    <img src="/resources/img/portfolio-6.jpg" class="img-responsive" alt="" />
 
                                     <div class="overlay">
                                         <h3 class="reference-title">Project name</h3> 
@@ -629,7 +631,7 @@ _________________________________________________________ -->
                                     </div>
                                 </a>
 
-                                <div class="sr-only reference-description" data-images="img/main-slider1.jpg,img/main-slider2.jpg,img/main-slider3.jpg">
+                                <div class="sr-only reference-description" data-images="/resources/img/main-slider1.jpg,/resources/img/main-slider2.jpg,/resources/img/main-slider3.jpg">
 
                                     <p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour
                                         explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
@@ -649,7 +651,7 @@ _________________________________________________________ -->
                         <div class="reference-item" data-category="seo">
                             <div class="reference">
                                 <a href="#">
-                                    <img src="img/portfolio-7.jpg" class="img-responsive" alt="" />
+                                    <img src="/resources/img/portfolio-7.jpg" class="img-responsive" alt="" />
 
                                     <div class="overlay">
                                         <h3 class="reference-title">Project name</h3> 
@@ -657,7 +659,7 @@ _________________________________________________________ -->
                                     </div>
                                 </a>
 
-                                <div class="sr-only reference-description" data-images="img/main-slider1.jpg,img/main-slider2.jpg,img/main-slider3.jpg">
+                                <div class="sr-only reference-description" data-images="/resources/img/main-slider1.jpg,/resources/img/main-slider2.jpg,/resources/img/main-slider3.jpg">
 
                                     <p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour
                                         explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
@@ -676,7 +678,7 @@ _________________________________________________________ -->
                         <div class="reference-item" data-category="webdesign">
                             <div class="reference">
                                 <a href="#">
-                                    <img src="img/portfolio-8.jpg" class="img-responsive" alt="" />
+                                    <img src="/resources/img/portfolio-8.jpg" class="img-responsive" alt="" />
 
                                     <div class="overlay">
                                         <h3 class="reference-title">Project name</h3> 
@@ -684,7 +686,7 @@ _________________________________________________________ -->
                                     </div>
                                 </a>
 
-                                <div class="sr-only reference-description" data-images="img/main-slider1.jpg,img/main-slider2.jpg,img/main-slider3.jpg">
+                                <div class="sr-only reference-description" data-images="/resources/img/main-slider1.jpg,/resources/img/main-slider2.jpg,/resources/img/main-slider3.jpg">
 
                                     <p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour
                                         explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
@@ -723,37 +725,37 @@ _________________________________________________________ -->
                     <div class="row">
                         <div class="col-sm-4 col-md-2  col-xs-6">
                             <div class="customer">
-                                <img class="img-responsive" src="img/customers/kofola.png" title="Kofola" data-placement="bottom" data-toggle="tooltip" alt="">
+                                <img class="img-responsive" src="/resources/img/customers/kofola.png" title="Kofola" data-placement="bottom" data-toggle="tooltip" alt="">
                             </div>
                         </div>
 
                         <div class="col-sm-4 col-md-2  col-xs-6">
                             <div class="customer">
-                                <img class="img-responsive" src="img/customers/evian.png" title="Evian" data-placement="bottom" data-toggle="tooltip" alt="">
+                                <img class="img-responsive" src="/resources/img/customers/evian.png" title="Evian" data-placement="bottom" data-toggle="tooltip" alt="">
                             </div>
                         </div>
 
                         <div class="col-sm-4 col-md-2  col-xs-6">
                             <div class="customer">
-                                <img class="img-responsive" src="img/customers/cslink.png" title="CS Link" data-placement="bottom" data-toggle="tooltip" alt="">
+                                <img class="img-responsive" src="/resources/img/customers/cslink.png" title="CS Link" data-placement="bottom" data-toggle="tooltip" alt="">
                             </div>
                         </div>
 
                         <div class="col-sm-4 col-md-2  col-xs-6">
                             <div class="customer">
-                                <img class="img-responsive" src="img/customers/botas66.png" title="Botas 66 Concept store" data-placement="bottom" data-toggle="tooltip" alt="">
+                                <img class="img-responsive" src="/resources/img/customers/botas66.png" title="Botas 66 Concept store" data-placement="bottom" data-toggle="tooltip" alt="">
                             </div>
                         </div>
 
                         <div class="col-sm-4 col-md-2  col-xs-6">
                             <div class="customer">
-                                <img class="img-responsive" src="img/customers/mdfc.png" title="MediaFabríca" data-placement="bottom" data-toggle="tooltip" alt="">
+                                <img class="img-responsive" src="/resources/img/customers/mdfc.png" title="MediaFabríca" data-placement="bottom" data-toggle="tooltip" alt="">
                             </div>
                         </div>
 
                         <div class="col-sm-4 col-md-2  col-xs-6">
                             <div class="customer">
-                                <img class="img-responsive" src="img/customers/vanek.png" title="VANĚK Strojírenská výroba" data-placement="bottom" data-toggle="tooltip" alt="">
+                                <img class="img-responsive" src="/resources/img/customers/vanek.png" title="VANĚK Strojírenská výroba" data-placement="bottom" data-toggle="tooltip" alt="">
                             </div>
                         </div>
 
@@ -882,38 +884,38 @@ _________________________________________________________ -->
     <!-- #### JAVASCRIPT FILES ### -->
 
     <!-- js base -->
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/resources/js/jquery-1.11.0.min.js"></script>
+    <script src="/resources/js/bootstrap.min.js"></script>
 
     <!-- for demo purpose -->
-    <script src="js/jquery.cookie.js"></script>
+    <script src="/resources/js/jquery.cookie.js"></script>
 
     <!-- waypoints for scroll spy -->
-    <script src="js/waypoints.min.js"></script>
+    <script src="/resources/js/waypoints.min.js"></script>
 
     <!-- maps -->
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-    <script src="js/gmaps.js"></script>
+    <script src="/resources/js/gmaps.js"></script>
 
     <!-- masonry layout -->
-    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="/resources/js/masonry.pkgd.min.js"></script>
 
     <!-- owl carousel -->
-    <script src="js/owl.carousel.min.js"></script>
+    <script src="/resources/js/owl.carousel.min.js"></script>
 
 
     <!-- jQuery scroll to -->
-    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="/resources/js/jquery.scrollTo.min.js"></script>
 
     <!-- jQuery counter -->
-    <script src="js/jquery.counterup.min.js"></script>
+    <script src="/resources/js/jquery.counterup.min.js"></script>
 
     <!-- jQuery parallax -->
-    <script src="js/jquery.parallax-1.1.3.js"></script>
+    <script src="/resources/js/jquery.parallax-1.1.3.js"></script>
 
     <!-- main js file -->
 
-    <script src="js/front.js"></script>
+    <script src="/resources/js/front.js"></script>
 
     
 

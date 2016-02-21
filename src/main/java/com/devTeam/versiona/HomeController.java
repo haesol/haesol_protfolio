@@ -16,10 +16,9 @@ public class HomeController {
 	 * redirect to article, that is our Home Page.
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public ModelAndView home() {
+	public String home() {
 
-		String url = "redirect:/developers";
-		return new ModelAndView(url);
+		return "portfolio";
 
 	}
 
